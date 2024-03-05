@@ -60,6 +60,9 @@ const authenticate = async (
       email: user.email,
       id: user.id,
       role: user.role,
+      createdEvents: user.createdEvents,
+      favoritedEvents: user.favoritedEvents,
+      attendedEvents: user.attendedEvents,
     };
 
     res.locals.userFromToken = outputUser;

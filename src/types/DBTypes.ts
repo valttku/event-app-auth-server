@@ -6,6 +6,9 @@ type User = Partial<Document> & {
   email: string;
   role: 'user' | 'admin';
   password: string;
+  createdEvents: Types.ObjectId[];
+  favoritedEvents: Types.ObjectId[];
+  attendedEvents: Types.ObjectId[];
 };
 
 type UserOutput = Omit<User, 'password' | 'role'>;

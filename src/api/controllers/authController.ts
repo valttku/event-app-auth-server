@@ -27,6 +27,9 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
     email: user.email,
     id: user._id,
     role: user.role,
+    createdEvents: user.createdEvents,
+    favoritedEvents: user.favoritedEvents,
+    attendedEvents: user.attendedEvents,
   };
 
   const token = jwt.sign(tokenContent, process.env.JWT_SECRET as string);
@@ -37,6 +40,9 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
       user_name: user.user_name,
       email: user.email,
       id: user._id,
+      createdEvents: user.createdEvents,
+      favoritedEvents: user.favoritedEvents,
+      attendedEvents: user.attendedEvents,
     },
   };
   return res.json(message);

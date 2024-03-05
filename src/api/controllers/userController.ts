@@ -55,6 +55,9 @@ const userPost = async (
         user_name: newUser.user_name,
         email: newUser.email,
         id: newUser._id,
+        createdEvents: newUser.createdEvents,
+        favoritedEvents: newUser.favoritedEvents,
+        attendedEvents: newUser.attendedEvents,
       },
     };
     res.json(response);
@@ -92,6 +95,9 @@ const userPut = async (
         user_name: result.user_name,
         email: result.email,
         id: result._id,
+        createdEvents: result.createdEvents,
+        favoritedEvents: result.favoritedEvents,
+        attendedEvents: result.attendedEvents,
       },
     };
     res.json(response);
@@ -130,6 +136,9 @@ const userDelete = async (
         user_name: result.user_name,
         email: result.email,
         id: result._id,
+        createdEvents: result.createdEvents,
+        favoritedEvents: result.favoritedEvents,
+        attendedEvents: result.attendedEvents,
       },
     };
     console.log('delete response', response);

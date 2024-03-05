@@ -23,6 +23,18 @@ const userModel = new mongoose.Schema<User>({
     type: String,
     required: true,
   },
+  createdEvents: {
+    type: [String],
+    default: [],
+  },
+  favoritedEvents: {
+    type: [String],
+    default: [],
+  },
+  attendedEvents: {
+    type: [String],
+    default: [],
+  },
 });
 
 // Duplicate the ID field.
